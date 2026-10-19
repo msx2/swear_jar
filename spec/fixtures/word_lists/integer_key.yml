@@ -1,0 +1,6 @@
+locale: pl
+words:
+  - stem: smok
+    1: 2
+    severity: mild
+    categories: [insult]

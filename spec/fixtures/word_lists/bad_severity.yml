@@ -1,0 +1,5 @@
+locale: pl
+words:
+  - stem: x
+    severity: loud
+    categories: [vulgar]

@@ -1,0 +1,4 @@
+pl:
+  errors:
+    messages:
+      profane: "zawiera niedozwolone słowa"

@@ -1,0 +1,8 @@
+locale: pl
+prefixes: [bez]
+words:
+  - stem: smoczyslow
+    severity: strong
+    categories: [insult]
+allow:
+  - smoczyslowianin

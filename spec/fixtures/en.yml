@@ -1,0 +1,160 @@
+# English corpus. `profane` cases must yield exactly one match with this text and stem;
+# `clean` cases must not be profane. A plain string is a :words mode clean case.
+profane:
+  - { input: 'fuck', text: fuck, stem: fuck }
+  - { input: 'what the fuck?!', text: fuck, stem: fuck }
+  - { input: 'fucking great', text: fucking, stem: fuck }
+  - { input: 'f*ck this', text: 'f*ck', stem: fuck }
+  - { input: 'FUUUCK', text: FUUUCK, stem: fuck }
+  - { input: 'phuck off', text: phuck, stem: fuck }
+  - { input: 'you motherfucker', text: motherfucker, stem: motherfuck }
+  - { input: 'oh shit', text: shit, stem: shit }
+  - { input: 'sh1t happens', text: sh1t, stem: shit }
+  - { input: 'that is bullshit', text: bullshit, stem: bullshit }
+  - { input: 'dipshit', text: dipshit, stem: dipshit }
+  - { input: 'cunt', text: cunt, stem: cunt }
+  - { input: 'son of a bitch', text: bitch, stem: bitch }
+  - { input: 'you bastard', text: bastard, stem: bastard }
+  - { input: 'dickhead', text: dickhead, stem: dick }
+  - { input: 'cocksucker', text: cocksucker, stem: cock }
+  - { input: 'pussy', text: pussy, stem: pussy }
+  - { input: 'kiss my ass', text: ass, stem: ass }
+  - { input: 'a$$', text: 'a$$', stem: ass }
+  - { input: 'assassin ass', text: ass, stem: ass }
+  - { input: 'asshole', text: asshole, stem: asshol }
+  - { input: 'arsehole', text: arsehole, stem: asshol }
+  - { input: 'get off your arse', text: arse, stem: arse }
+  - { input: 'jackass', text: jackass, stem: jackass }
+  - { input: 'dumbass', text: dumbass, stem: dumbass }
+  - { input: 'twat', text: twat, stem: twat }
+  - { input: 'wanker', text: wanker, stem: wank }
+  - { input: 'bollocks', text: bollocks, stem: bollock }
+  - { input: 'bugger off', text: bugger, stem: bugger }
+  - { input: 'this is crap', text: crap, stem: crap }
+  - { input: 'piss off', text: piss, stem: piss }
+  - { input: 'turds', text: turds, stem: turd }
+  - { input: 'slut', text: slut, stem: slut }
+  - { input: 'whore', text: whore, stem: whore }
+  - { input: 'skank', text: skank, stem: skank }
+  - { input: 'douchebag', text: douchebag, stem: douche }
+  - { input: 'prick', text: prick, stem: prick }
+  - { input: 'bellend', text: bellend, stem: bellend }
+  - { input: 'dildo', text: dildo, stem: dildo }
+  - { input: 'jizz', text: jizz, stem: jizz }
+  - { input: 'cum', text: cum, stem: cum }
+  - { input: 'nice tits', text: tits, stem: tit }
+  - { input: 'boobs', text: boobs, stem: boob }
+  - { input: 'blowjob', text: blowjob, stem: blowjob }
+  - { input: 'handjob', text: handjob, stem: handjob }
+  - { input: 'ballsack', text: ballsack, stem: ballsack }
+  - { input: 'milf', text: milf, stem: milf }
+  - { input: 'fap', text: fap, stem: fap }
+  - { input: 'wtf', text: wtf, stem: wtf }
+  - { input: 'stfu noob', text: stfu, stem: stfu }
+  - { input: 'you idiot', text: idiot, stem: idiot }
+  - { input: 'cretin', text: cretin, stem: cretin }
+  - { input: 'retard', text: retard, stem: retard }
+  - { input: 'nigger', text: nigger, stem: nigger }
+  - { input: 'n1gga', text: n1gga, stem: nigger }
+  - { input: 'faggot', text: faggot, stem: faggot }
+  - { input: 'fags', text: fags, stem: fag }
+  - { input: 'kike', text: kike, stem: kike }
+  - { input: 'wetback', text: wetback, stem: wetback }
+  - { input: 'tranny', text: tranny, stem: tranny }
+  - { input: 'gook', text: gook, stem: gook }
+  - { input: 'coon', text: coon, stem: coon }
+  - { input: 'raghead', text: raghead, stem: raghead }
+  - { input: 'damn it', text: damn, stem: damn }
+  - { input: 'goddamn', text: goddamn, stem: damn }
+  - { input: 'go to hell', text: hell, stem: hell }
+  - { input: 'move your asses', text: asses, stem: ass }
+  - { input: 'damned noobs', text: damned, stem: damn }
+  - { input: 'pussies', text: pussies, stem: pussy }
+  - { input: 'bloody hells', text: hells, stem: hell }
+  - { input: 'xXFuckerXx', text: xXFuckerXx, stem: fuck, mode: embedded }
+  - { input: 'BigDick99', text: BigDick99, stem: dick, mode: embedded }
+  - { input: 'Shithead', text: Shithead, stem: shit, mode: embedded }
+  - { input: 'LordCunt', text: LordCunt, stem: cunt, mode: embedded }
+  - { input: 'TheNiggerKing', text: TheNiggerKing, stem: nigger, mode: embedded }
+  - { input: 'you a**hole', text: 'a**hole', stem: asshol }
+  - { input: 'pu**y', text: 'pu**y', stem: pussy }
+  - { input: 'fa**ot', text: 'fa**ot', stem: faggot }
+  - { input: 'utter bo**ocks', text: 'bo**ocks', stem: bollock }
+
+clean:
+  # fantasy game vocabulary
+  - Assassin
+  - Paladin
+  - Necromancer
+  - Warlock
+  - Cockatrice
+  - Hellhound
+  - Hellfire
+  - Titan
+  - Shell of the turtle
+  - Classic mage
+  - Bassist of the bard guild
+  - Cockpit of the airship
+  - Peacock feather
+  - Dickens
+  - { input: Assassin, mode: embedded }
+  - { input: Cockatrice, mode: embedded }
+  - { input: Peacock, mode: embedded }
+  - { input: Bassist, mode: embedded }
+  - { input: Classic, mode: embedded }
+  - { input: Scunthorpe, mode: embedded }
+  - { input: Shiitake, mode: embedded }
+  - { input: Riddick, mode: embedded }
+  - { input: Titania, mode: embedded }
+  - { input: Saturday, mode: embedded }
+  - { input: Skyscraper, mode: embedded }
+  - { input: Debugger, mode: embedded }
+  - { input: Iwanka, mode: embedded }
+  - { input: Raccoon, mode: embedded }
+  - { input: Parser, mode: embedded }
+  # allowlisted traps
+  - class
+  - cocktail
+  - scunthorpe
+  - shiitake mushrooms and shitake soup
+  - cucumber
+  - hello there
+  - Dickinson
+  - Matsushita
+  - a cockatoo, a cockatiel, a cockroach and a cockerel
+  - a cockney accent, cockle shells, a cockade
+  - Hitchcock, shuttlecock, woodcock, weathercock, gamecock, Hancock, Babcock
+  - pussycat, pussyfoot
+  - swanky
+  - Wankel engine
+  - snigger
+  - niggardly
+  - fire retardant
+  - retardation of growth
+  - retardacja
+  # ordinary English
+  - Good morning, how are you?
+  - The scrap metal pile
+  - Saturday night
+  - Arsenal won the match
+  - arsenic poisoning
+  - parse the file
+  - sparse matrix
+  - Mississippi
+  - my assistant
+  - a secret passage
+  - the embassy
+  - grasshopper
+  - analysis of data
+  - Sussex and Essex
+  - cumulative score
+  - titmouse
+  - a booby trap
+  - a prickly bush
+  - a nightgown
+  - the spice market
+  - a document about Niger and Nigeria
+  - therapist
+  - Shih Tzu
+  - a scrapbook
+  - Hellas

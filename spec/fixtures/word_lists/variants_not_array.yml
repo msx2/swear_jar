@@ -1,0 +1,6 @@
+locale: pl
+words:
+  - stem: x
+    variants: huj
+    severity: mild
+    categories: [vulgar]

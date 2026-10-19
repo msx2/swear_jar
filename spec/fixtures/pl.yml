@@ -1,0 +1,200 @@
+# Polish corpus. `profane` cases must yield exactly one match with this text and stem;
+# `clean` cases must not be profane. A plain string is a :words mode clean case.
+profane:
+  - { input: 'o kurwa, znowu przegrałem', text: kurwa, stem: kurw }
+  - { input: 'jestem wkurwiony', text: wkurwiony, stem: kurw }
+  - { input: 'ty skurwysynu', text: skurwysynu, stem: kurw }
+  - { input: 'kurewsko zimno', text: kurewsko, stem: kurw }
+  - { input: 'K*rwa mać', text: 'K*rwa', stem: kurw }
+  - { input: 'kurw4', text: kurw4, stem: kurw }
+  - { input: 'k u r w a', text: 'k u r w a', stem: kurw }
+  - { input: 'chuj ci w oko', text: chuj, stem: chuj }
+  - { input: 'chujowa gra', text: chujowa, stem: chuj }
+  - { input: 'huj wie', text: huj, stem: chuj }
+  - { input: 'nie pierdol', text: pierdol, stem: pierdol }
+  - { input: 'spierdalaj stąd', text: spierdalaj, stem: pierdol }
+  - { input: 'dostał wpierdol', text: wpierdol, stem: pierdol }
+  - { input: 'totalny rozpierdol', text: rozpierdol, stem: pierdol }
+  - { input: 'napierdalają się', text: napierdalają, stem: pierdol }
+  - { input: 'zajebisty miecz', text: zajebisty, stem: jeb }
+  - { input: 'wyjebać go z gildii', text: wyjebać, stem: jeb }
+  - { input: 'pojebany boss', text: pojebany, stem: jeb }
+  - { input: 'jebać to', text: jebać, stem: jeb }
+  - { input: 'ale zjeb', text: zjeb, stem: jeb }
+  - { input: 'ty pizdo', text: pizdo, stem: pizd }
+  - { input: 'ale piździ', text: piździ, stem: pizd }
+  - { input: 'gówno prawda', text: gówno, stem: gówno }
+  - { input: 'ty gówniarzu', text: gówniarzu, stem: gówno }
+  - { input: 'g0wno', text: g0wno, stem: gówno }
+  - { input: 'pocałuj mnie w dupę', text: dupę, stem: dup }
+  - { input: 'mieszka na zadupiu', text: zadupiu, stem: dup }
+  - { input: 'dupek', text: dupek, stem: dup }
+  - { input: 'cipa', text: cipa, stem: cip }
+  - { input: 'cipka', text: cipka, stem: cip }
+  - { input: 'kutas', text: kutas, stem: kutas }
+  - { input: 'fiut', text: fiut, stem: fiut }
+  - { input: 'chcę cię ruchać', text: ruchać, stem: rucha }
+  - { input: 'wyruchał nas', text: wyruchał, stem: rucha }
+  - { input: 'srać na to', text: srać, stem: sra }
+  - { input: 'zesrał się', text: zesrał, stem: sra }
+  - { input: 'ale pierdzi', text: pierdzi, stem: pierdz }
+  - { input: 'wypierdek mamuta', text: wypierdek, stem: pierdz }
+  - { input: 'ty suko', text: suko, stem: suk }
+  - { input: 'sukinsyn', text: sukinsyn, stem: suk }
+  - { input: 'dziwka', text: dziwka, stem: dziwk }
+  - { input: 'zdzira', text: zdzira, stem: zdzir }
+  - { input: 'ty szmato', text: szmato, stem: szmat }
+  - { input: 'jesteś debilem', text: debilem, stem: debil }
+  - { input: 'idiota', text: idiota, stem: idiot }
+  - { input: 'kretyni', text: kretyni, stem: kretyn }
+  - { input: 'matole', text: matole, stem: matoł }
+  - { input: 'jełopie', text: jełopie, stem: jełop }
+  - { input: 'cwel', text: cwel, stem: cwel }
+  - { input: 'ty pedale', text: pedale, stem: pedał }
+  - { input: 'pedał', text: pedał, stem: pedał }
+  - { input: 'spedalony', text: spedalony, stem: pedał }
+  - { input: 'ciota', text: ciota, stem: ciot }
+  - { input: 'lesba', text: lesba, stem: lesba }
+  - { input: 'czarnuch', text: czarnuch, stem: czarnuch }
+  - { input: 'ciapaty', text: ciapaty, stem: ciapat }
+  - { input: 'kacap', text: kacap, stem: kacap }
+  - { input: 'cholera jasna', text: cholera, stem: choler }
+  - { input: 'idź do diabła!', text: 'do diabła', stem: do diabła }
+  - { input: 'KurwiMistrz', text: KurwiMistrz, stem: kurw, mode: embedded }
+  - { input: 'xXChujXx', text: xXChujXx, stem: chuj, mode: embedded }
+  - { input: 'SuperDebil', text: SuperDebil, stem: debil, mode: embedded }
+  - { input: 'MegaPizda', text: MegaPizda, stem: pizd, mode: embedded }
+  - { input: 'WielkiPedał', text: WielkiPedał, stem: pedał, mode: embedded }
+  - { input: 'Suka123', text: Suka123, stem: suk, mode: embedded }
+  - { input: 'Dupleks dupa', text: dupa, stem: dup }
+  - { input: 'banda dziwek', text: dziwek, stem: dziwk }
+  - { input: 'daj tej suce spokój', text: suce, stem: suk }
+  - { input: 'po fiucie', text: fiucie, stem: fiut }
+  - { input: 'o tej szmacie', text: szmacie, stem: szmat }
+  - { input: 'idioci wszędzie', text: idioci, stem: idiot }
+  - { input: 'o tej lesbie', text: lesbie, stem: lesba }
+  - { input: 'ty pedziu', text: pedziu, stem: pedał }
+  - { input: 'pedzio', text: pedzio, stem: pedał }
+  - { input: 'ciapak', text: ciapak, stem: ciapat }
+  - { input: 'DupaJasiu', text: DupaJasiu, stem: dup, mode: embedded }
+  - { input: 'Matoł99', text: Matoł99, stem: matoł, mode: embedded }
+
+clean:
+  # fantasy game vocabulary
+  - Kusznik
+  - Kapłanka
+  - Kapłan
+  - Tawerna
+  - Hulaj
+  - Dupleks
+  - Łucznik
+  - Skrytobójca
+  - Pasibrzuch
+  - Diabeł w tawernie
+  - Mroczny Palantir
+  - Kocioł czarownicy
+  - Sukno elfów
+  - Szczątki smoka
+  - { input: Kusznik, mode: embedded }
+  - { input: Kapłanka, mode: embedded }
+  - { input: Tawerna, mode: embedded }
+  - { input: Hulaj, mode: embedded }
+  - { input: Dupleks, mode: embedded }
+  - { input: Skrytobójca, mode: embedded }
+  - { input: Pasibrzuch, mode: embedded }
+  - { input: Łucznik, mode: embedded }
+  # allowlisted traps
+  - To jest duplikat klucza
+  - Mieszkamy w dupleksie, a nie w duplex
+  - Firma podupadła po kryzysie
+  - Złapał mnie skurcz w łydce
+  - Jeżdżę na hulajnodze, hulajnoga jest szybka
+  - Gram na fagocie, fagot to instrument
+  - Moja ciotka Zosia, ciotki i ciotek
+  - Dałem prezent ciotce
+  - Mój brat cioteczny
+  - Ciotuchna upiekła ciasto
+  - Odniósł wielki sukces
+  - Sukcesja tronu
+  - Kupiłam nową sukienkę, ta sukienka i sukienki są tanie
+  - Suknia ślubna i dwie suknie
+  - Sukulenty na parapecie
+  - Chłop w sukmanie
+  - Przyszedł w sukurs
+  - Lubię sukiyaki
+  - Lubię pedałować pod górę
+  - Pedałowanie jest zdrowe
+  - Pedałuj szybciej
+  - Szmatka do kurzu
+  - Szmaciana lalka
+  - Duplikacja danych i zduplikowany plik
+  - Muszę zduplikować ten wpis, duplikować to nic złego
+  - Choleryk z temperamentem choleryczny
+  - Ciotunia i ciotuś
+  - Żarówka Osram
+  - Succeed and success are fine
+  - { input: StandupGuy, mode: embedded }
+  - { input: Roundup, mode: embedded }
+  - { input: Holdup, mode: embedded }
+  - { input: Soundup, mode: embedded }
+  - { input: Dermatolog, mode: embedded }
+  - { input: DrStomatolog, mode: embedded }
+  - { input: Hematology, mode: embedded }
+  - { input: Reumatologia, mode: embedded }
+  - Ten film jest z Pacanowa, Koziołek z Pacanów
+  - W ruchach tanecznych i ruchami rąk
+  # English words that contain a Polish stem (the default detector mixes both lists)
+  - Duplicate the file, duplication is fine
+  - Lego Duplo bricks
+  - Pedaling, pedalling, he pedaled and pedalled
+  - A Caesar cipher
+  - A debilitating injury
+  - Gammon steak
+  - A choleric temper
+  - The Palantir of Orthanc
+  # ordinary Polish
+  - Dzień dobry, jak się masz?
+  - Do zobaczenia jutro
+  - Kurtka wisi na wieszaku
+  - Kurczak z rożna
+  - Kurier przyjechał
+  - Kurek w łazience
+  - Ruch drogowy jest duży
+  - Ruchome schody
+  - Debiut w drużynie
+  - Idiom to związek frazeologiczny
+  - Kret kopie w ogrodzie
+  - Matowy lakier
+  - Frajda z gry
+  - Jelonek w lesie
+  - Ćwiczenia na siłowni
+  - Ćwierć wieku
+  - Ciocia przyjechała
+  - Ciapa z niego
+  - Lesbijka i gej
+  - Czarnuszka siewna
+  - Pedagog szkolny
+  - Pedantyczny porządek
+  - Pizza z serem
+  - Pierogi ruskie
+  - Pierzyna i poduszka
+  - Szczyt góry
+  - Srebrny pierścień
+  - Zdziwienie i zdziwiony
+  - Dziwny dźwięk
+  - Fiolet i fiat
+  - Kutia na wigilię
+  - Gowin
+  - Cholewka buta
+  - Chochoł w Weselu
+  - Kasza z mięsem
+  - Kapusta kiszona
+  - Japonia
+  - Kmieć orał pole
+  - Paczka przyszła
+  - Imbir i cytryna
+  - Hejnał mariacki
+  - Ładna pogoda, idziemy na spacer
+  - Spieszę się do pracy
+  - Zastrzyk w szpitalu
+  - Posuwisty krok

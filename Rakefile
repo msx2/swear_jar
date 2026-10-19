@@ -1,0 +1,16 @@
+# frozen_string_literal: true
+
+require 'bundler/gem_helper'
+require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
+
+Bundler::GemHelper.install_tasks
+RSpec::Core::RakeTask.new(:spec)
+RuboCop::RakeTask.new
+
+task default: %i[spec rubocop]
+
+desc 'Benchmark the detector (average µs per call)'
+task :bench do
+  ruby 'benchmark/detector_bench.rb'
+end

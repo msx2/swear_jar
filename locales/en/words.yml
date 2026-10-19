@@ -1,0 +1,266 @@
+# English word list. English entries never take prefixes. Short or ambiguous words are
+# `exact: true` (whole word only) and/or `embeddable: false` (never inside a word).
+# A comment after a flag lists innocent words that the flag keeps from being reported.
+# The default detector loads the Polish list too, so Polish words count as well.
+words:
+  # --- vulgar and sexual ---
+  - stem: fuck
+    variants: [fck, fvck, phuck]
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: motherfuck
+    severity: strong
+    categories: [vulgar, insult]
+  - stem: shit
+    severity: strong
+    categories: [vulgar]
+  - stem: bullshit
+    severity: strong
+    categories: [vulgar]
+  - stem: cunt
+    severity: strong
+    categories: [vulgar, sexual, insult]
+  - stem: dick
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: cock
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: pussy
+    variants: [pussies]
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: dildo
+    severity: strong
+    categories: [sexual]
+  - stem: jizz
+    severity: strong
+    categories: [sexual]
+  - stem: cum
+    variants: [cums, cumming]
+    severity: strong
+    categories: [sexual]
+    exact: true
+  - stem: blowjob
+    severity: strong
+    categories: [sexual]
+  - stem: handjob
+    severity: strong
+    categories: [sexual]
+  - stem: ballsack
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: milf
+    severity: strong
+    categories: [sexual]
+  - stem: ass
+    variants: [asses]
+    severity: mild
+    categories: [vulgar]
+    embeddable: false
+    exact: true
+  - stem: arse
+    variants: [arses]
+    severity: mild
+    categories: [vulgar]
+    embeddable: false          # keeps clean: parse, sparse, coarse
+    exact: true                # keeps clean: arsenal, arsenic
+  - stem: crap
+    severity: mild
+    categories: [vulgar]
+    embeddable: false          # keeps clean: scrap, skyscraper
+  - stem: piss
+    severity: mild
+    categories: [vulgar]
+  - stem: turd
+    variants: [turds]
+    severity: mild
+    categories: [vulgar]
+    embeddable: false          # keeps clean: Saturday
+    exact: true
+  - stem: bollock
+    severity: mild
+    categories: [vulgar]
+  - stem: bugger
+    severity: mild
+    categories: [vulgar]
+    embeddable: false          # keeps clean: debugger
+  - stem: tit
+    variants: [tits, titty, titties]
+    severity: mild
+    categories: [sexual]
+    exact: true
+  - stem: boob
+    variants: [boobs, boobies]
+    severity: mild
+    categories: [sexual]
+    exact: true
+  - stem: fap
+    variants: [fapping]
+    severity: mild
+    categories: [sexual]
+    exact: true
+  - stem: wtf
+    severity: mild
+    categories: [vulgar]
+    exact: true
+  - stem: stfu
+    severity: mild
+    categories: [vulgar]
+    exact: true
+  # --- insults ---
+  - stem: bitch
+    severity: strong
+    categories: [insult]
+  - stem: asshol
+    variants: [arsehol]
+    severity: strong
+    categories: [insult]
+  - stem: dipshit
+    severity: strong
+    categories: [insult]
+  - stem: twat
+    severity: strong
+    categories: [insult, sexual]
+  - stem: wank
+    severity: strong
+    categories: [insult, sexual]
+    embeddable: false          # keeps clean: Iwanka, swank
+  - stem: slut
+    severity: strong
+    categories: [insult, sexual]
+  - stem: whore
+    variants: [whoring]
+    severity: strong
+    categories: [insult, sexual]
+  - stem: skank
+    severity: strong
+    categories: [insult]
+  - stem: bastard
+    severity: mild
+    categories: [insult]
+  - stem: jackass
+    severity: mild
+    categories: [insult]
+  - stem: dumbass
+    severity: mild
+    categories: [insult]
+  - stem: douche
+    severity: mild
+    categories: [insult]
+  - stem: prick
+    variants: [pricks]
+    severity: mild
+    categories: [insult]
+    exact: true                # keeps clean: prickly, prickle
+  - stem: bellend
+    severity: mild
+    categories: [insult]
+  - stem: idiot
+    severity: mild
+    categories: [insult]
+  - stem: cretin
+    severity: mild
+    categories: [insult]
+  # --- slurs ---
+  - stem: retard
+    severity: strong
+    categories: [insult, slur]
+  - stem: nigger
+    variants: [nigga, niggaz]
+    severity: severe
+    categories: [slur]
+  - stem: faggot
+    severity: severe
+    categories: [slur]
+  - stem: fag
+    variants: [fags]
+    severity: severe
+    categories: [slur]
+    embeddable: false
+    exact: true                # keeps clean: Polish fagot (bassoon)
+  - stem: kike
+    variants: [kikes]
+    severity: severe
+    categories: [slur]
+    embeddable: false
+    exact: true
+  - stem: wetback
+    severity: severe
+    categories: [slur]
+  - stem: tranny
+    variants: [trannies]
+    severity: severe
+    categories: [slur]
+    exact: true
+  - stem: gook
+    variants: [gooks]
+    severity: severe
+    categories: [slur]
+    embeddable: false
+    exact: true
+  - stem: coon
+    variants: [coons]
+    severity: severe
+    categories: [slur]
+    embeddable: false          # keeps clean: raccoon
+    exact: true
+  - stem: raghead
+    severity: severe
+    categories: [slur]
+  # --- religious ---
+  - stem: damn
+    variants: [damned, damnit, dammit, goddamn, goddamned, goddamnit]
+    severity: mild
+    categories: [religious]
+    exact: true
+  - stem: hell
+    variants: [hells]
+    severity: mild
+    categories: [religious]
+    exact: true                # keeps clean: hello, shell, hellhound
+allow:
+  # innocent words containing `ass`
+  - assassin
+  - class
+  - bassist
+  # innocent words containing `cock`
+  - cocktail
+  - cockpit
+  - peacock
+  - cockatoo
+  - cockatiel
+  - cockatrice
+  - cockroach
+  - cockerel
+  - cockney
+  - cockle
+  - cockade
+  - hitchcock
+  - shuttlecock
+  - woodcock
+  - weathercock
+  - gamecock
+  - hancock
+  - babcock
+  # innocent words containing other stems
+  - scunthorpe
+  - shiitake
+  - shitake
+  - matsushita
+  - cucumber
+  - dickens
+  - dickinson
+  - riddick
+  - hello
+  - shell
+  - titan
+  - pussycat
+  - pussyfoot
+  - swank
+  - wankel
+  - snigger
+  - niggard
+  - retardant
+  - retardation
+  - retardac                   # Polish retardacja (retardation)

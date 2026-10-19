@@ -1,0 +1,213 @@
+# Polish word list. Stems are written with diacritics; they are folded like the input text.
+# Non-exact entries also match after one of the prefixes below (wkurwić, spierdalać, zajebać).
+# A comment after a flag lists innocent words that the flag keeps from being reported.
+# The default detector loads the English list too, so English words count as well.
+prefixes: [s, w, z, wy, za, od, po, na, prze, roz, wpie, ze, do, u, o, ob, pod, nad, przy]
+words:
+  # --- vulgar and sexual ---
+  - stem: kurw
+    variants: [kurew, kurest]
+    severity: strong
+    categories: [vulgar]
+  - stem: chuj
+    variants: [huj]
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: pierdol
+    variants: [pierdal]
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: jeb
+    variants: [joban, jobn]
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: pizd
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: cip
+    severity: strong
+    categories: [vulgar, sexual]
+    embeddable: false          # keeps clean: principle, recipe, municipal
+  - stem: kutas
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: fiut
+    variants: [fiuci]
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: rucha                # not `ruch`, which would report ruch (movement)
+    severity: strong
+    categories: [vulgar, sexual]
+  - stem: lachociąg
+    severity: strong
+    categories: [insult, sexual]
+  - stem: chędoż
+    severity: mild
+    categories: [sexual]
+  - stem: gówno                # not `gówn`: without diacritics it is `gown`, which would report gown
+    variants: [gówna, gówni, gównu, gównem, gówien]
+    severity: mild
+    categories: [vulgar]
+  - stem: dup
+    severity: mild
+    categories: [vulgar]
+    embeddable: false          # keeps clean: standup, roundup, holdup
+  - stem: sra
+    severity: mild
+    categories: [vulgar]
+    embeddable: false          # keeps clean: Israel, Basra
+  - stem: pierdz
+    variants: [pierdn, pierdek, pierdk]
+    severity: mild
+    categories: [vulgar]
+  # --- insults ---
+  - stem: suk
+    variants: [suce]           # the allow word `succe` keeps succeed and success clean
+    severity: strong
+    categories: [insult]
+    embeddable: false          # keeps clean: Asuka, Tsukuyomi
+  - stem: dziwk
+    variants: [dziwek]
+    severity: strong
+    categories: [insult, sexual]
+  - stem: zdzir
+    severity: strong
+    categories: [insult, sexual]
+  - stem: szmat
+    variants: [szmacie]        # not `szmaci`, which would report szmaciany (made of rags)
+    severity: mild
+    categories: [insult]
+  - stem: lafirynd
+    severity: mild
+    categories: [insult]
+  - stem: ladacznic
+    severity: mild
+    categories: [insult, sexual]
+  - stem: debil
+    severity: mild
+    categories: [insult]
+  - stem: idiot
+    variants: [idioci]
+    severity: mild
+    categories: [insult]
+  - stem: kretyn
+    severity: mild
+    categories: [insult]
+  - stem: imbecyl
+    severity: mild
+    categories: [insult]
+  - stem: matoł
+    severity: mild
+    categories: [insult]
+    embeddable: false          # keeps clean: dermatolog, stomatolog, hematology
+  - stem: palant
+    severity: mild
+    categories: [insult]
+  - stem: kmiot
+    severity: mild
+    categories: [insult]
+  - stem: jełop
+    severity: mild
+    categories: [insult]
+  - stem: ćwok
+    severity: mild
+    categories: [insult]
+  - stem: gamoń
+    severity: mild
+    categories: [insult]
+  - stem: pacan
+    severity: mild
+    categories: [insult]
+  - stem: frajer
+    severity: mild
+    categories: [insult]
+  # --- slurs ---
+  - stem: cwel
+    severity: strong
+    categories: [insult, slur]
+  - stem: pedał                # also reports pedał (bicycle pedal); pedałować is allowed below
+    variants: [pedzio, pedziu]
+    severity: severe
+    categories: [slur]
+  - stem: pederast
+    severity: severe
+    categories: [slur]
+  - stem: ciot
+    severity: severe
+    categories: [slur]
+  - stem: lesba                # exact, so the neutral lesbijka stays clean
+    variants: [lesby, lesbę, lesbo, lesbie]
+    severity: severe
+    categories: [slur]
+    exact: true
+  - stem: czarnuch
+    severity: severe
+    categories: [slur]
+  - stem: ciapat               # reports ciapaty, not the innocent ciapa (clumsy person)
+    variants: [ciapak]
+    severity: severe
+    categories: [slur]
+  - stem: kacap
+    severity: severe
+    categories: [slur]
+  # --- religious ---
+  - stem: choler
+    severity: mild
+    categories: [religious]
+  - stem: do diabła
+    severity: mild
+    categories: [religious]
+allow:
+  # innocent words containing `dup`
+  - duplikat
+  - duplik                     # covers duplikacja, duplikować
+  - duplex
+  - dupleks
+  - duplic                     # covers duplicate, duplication
+  - duplo
+  - podupad                    # covers podupadać, podupadły (to decline)
+  # innocent words close to `kurw` (it does not match them; kept as a guard)
+  - skurcz
+  # innocent words close to `chuj`/`huj` (it does not match them; kept as a guard)
+  - hulajnoga
+  # innocent words containing `ciot` (ciotka: aunt)
+  - ciotka
+  - ciotk
+  - ciotce
+  - ciotek
+  - ciotecz
+  - ciotuch
+  - ciotun
+  - ciotuś
+  # innocent words containing `suk`
+  - sukces
+  - sukce                      # covers sukcesja, sukcesor (succession, successor)
+  - sukienka
+  - sukien
+  - suknia
+  - sukn                       # covers sukni, sukno (dress, cloth)
+  - sukul                      # covers sukulent (succulent)
+  - sukman
+  - sukurs
+  - sukiyaki
+  - succe                      # covers succeed, success (they contain the variant `suce`)
+  # innocent words containing `pedał`
+  - pedałow                    # covers pedałować, pedałowanie (to pedal)
+  - pedałuj
+  - pedaling
+  - pedalling
+  - pedaled
+  - pedalled
+  # innocent words containing other stems
+  - szmatk                     # covers szmatka (cloth)
+  - cipher
+  - debilit                    # covers debilitate, debilitating
+  - palantir
+  - gammon
+  - pacanów
+  - choleric
+  - choleryk
+  - cholerycz
+  - osram                      # Osram, which contains `o` + `sra`
+  - ruchami                    # ruch (movement), contains `rucha`
+  - ruchach                    # ruch (movement), contains `rucha`
